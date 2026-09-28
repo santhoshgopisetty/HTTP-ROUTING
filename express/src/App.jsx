@@ -13,7 +13,7 @@ const App = () => {
       setSuccessMessage("");
       setUser(null);
 
-      const response = await fetch(`http://localhost:5000/api/user/${searchId}`);
+      const response = await fetch(`http://localhost:5009/api/user/${searchId}`);
       const data = await response.json();
 
       if (!response.ok) {
@@ -36,7 +36,7 @@ const App = () => {
       setError("");
       setSuccessMessage("");
 
-      const response = await fetch("http://localhost:5000/api/users", {
+      const response = await fetch("http://localhost:5009/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
